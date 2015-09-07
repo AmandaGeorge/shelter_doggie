@@ -1,3 +1,64 @@
+/* Navbar */
+.navbar {
+	background-color: #e16b43;
+}
+
+.navbar-default .navbar-toggle {
+	border-color: #062a5d;
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+	background-color: #062a5d;
+}
+
+.navbar-default .navbar-toggle:focus,
+.navbar-default .navbar-toggle:hover {
+	border-color: #0087c5;
+}
+
+.navbar .navbar-toggle:focus .icon-bar,
+.navbar .navbar-toggle:hover .icon-bar {
+	background-color: #0087c5;
+}
+
+.navbar-default .navbar-toggle:focus, 
+.navbar-default .navbar-toggle:hover {
+	background-color: #e16b43;
+}
+
+.navbar-default .navbar-brand,
+h1,
+h4,
+p {
+	color: #062a5d;
+}
+
+.navbar-default .navbar-nav>li>a {
+	color: #062a5d;
+}
+
+.navbar-default .navbar-nav>li>a:focus, 
+.navbar-default .navbar-nav>li>a:hover,
+.navbar-default .navbar-brand:focus, 
+.navbar-default .navbar-brand:hover {
+	color: #0087c5;
+	background-color: #ffa768
+}
+
 .body1 {
 	padding-top: 50px;
+}
+
+.body1 .well {
+	background-color: #ffa768;
+	box-shadow: 10px 10px 5px #888888;
+}
+
+#tagline {
+	text-shadow: 2px 2px #888888;
+}
+
+.blue {
+	color: #0087c5;
+	padding: 40px;
 }

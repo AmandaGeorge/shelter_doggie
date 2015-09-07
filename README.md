@@ -20,8 +20,10 @@ www.shelterdoggie.com
 
 ## Install Locally
 - Clone the repository by typing the following in Terminal:
+
 	`git clone https://github.com/AmandaGeorge/shelter_doggie.git`
 - Install the node modules by typing the following in Terminal from the root folder of the app:
+
 	`npm install`
 
 ## Author
@@ -30,4 +32,4 @@ Amanda George
 ## Contact Info
 https://github.com/AmandaGeorge
 
-https://www.linkedin.com/in/amandageorge828
+https://www.linkedin.com/in/AmandaGeorge828
