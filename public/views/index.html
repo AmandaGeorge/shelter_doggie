@@ -12,16 +12,6 @@
   <!-- custom styles -->
   <link rel="stylesheet" href="/styles/style.css">
 
-  <!-- angular -->
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular.min.js"></script>
-  <!-- ngRoute -->
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular-route.min.js"></script>
-  <!-- ngResource -->
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular-resource.min.js"></script>
-
-  <!-- custom script -->
-  <script src="public/scripts/app.js"></script>
-
 </head>
 <body ng-Controller="MainCtrl">
 
@@ -29,6 +19,7 @@
     <div class="container">
       <div class="navbar-header">
         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#toggle">
+          <span class="sr-only">Toggle navigation</span>
           <span class="icon-bar nav-color"></span>
           <span class="icon-bar nav-color"></span>
           <span class="icon-bar nav-color"></span>
@@ -46,17 +37,18 @@
 
   <div class="container-fluid body1" ng-view>
     <div class="row">
-      <div class="col-md-6 col-md-offset-3" align="center">
+      <div class="col-sm-6 col-sm-offset-3" align="center">
         <h1 id="tagline">Who's Your Doggie?</h1>
         <br>
       </div>
     </div>
     <div class="row">
-      <div class="col-md-4 blue" align="center">
+      <div class="col-sm-4 blue" align="center">
         <h3>Find a great breed to match your lifestyle!</h3>
       </div>
-      <div class="col-md-4 well" align="center">
+      <div class="col-sm-4 well" align="center">
         <h4>What size dog do you want?</h4>
+        <hr>
         <form><p align="left">
           <input type="radio" name="size" value="small">&nbsp;Small
           <br>
@@ -70,7 +62,7 @@
           <input type="submit" value="Get Started!" class="btn btn-primary">
         </p></form>
       </div>
-      <div class="col-md-4 blue" align="center">
+      <div class="col-sm-4 blue" align="center">
         <h3>Adopt your dog from a shelter near you!</h3>
       </div>
     </div>
@@ -80,5 +72,18 @@
       </div>
     </div>
   </div><!-- end of body1 -->
+
+  <!-- jQuery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <!-- bootstrap js -->
+ <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  <!-- angular -->
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular.min.js"></script>
+  <!-- ngRoute -->
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular-route.min.js"></script>
+  <!-- ngResource -->
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular-resource.min.js"></script>
+  <!-- custom script -->
+  <script src="public/scripts/app.js"></script>
 </body>
 </html>
