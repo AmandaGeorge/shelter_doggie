@@ -7,6 +7,7 @@ ShelterDoggie is an app for people who want to adopt a dog from a shelter and wa
 ## Technologies Used
 
 JavaScript
+jQuery
 AngularJS
 Bootstrap CSS
 KimonoLabs Custom API
@@ -14,6 +15,7 @@ Petfinder.com API
 MongoDB
 Node.js
 Express
+Bower
 
 ## Heroku
 www.shelterdoggie.com
