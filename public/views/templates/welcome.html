@@ -8,30 +8,185 @@
   <div class="col-sm-4 blue" align="center">
     <h3>Find a great breed to match your lifestyle!</h3>
   </div>
-  <div class="col-sm-4 well" align="center">
-    <h4>What size dog do you want?</h4>
-    <hr>
-    <form><p align="left">
-      <input type="radio" name="size" value="small">&nbsp;Small
+<!-- FORM QUESTIONS -->
+  <!-- size -->
+  <div class="col-sm-4 well" ng-show="size" align="center">
+    <form >
+      <h4>What size dog do you want?</h4>
+      <hr>
+      <p align="left">
+      <input type="radio" name="size" value="s" ng-model="answers.size">&nbsp;Small
       <br>
-      <input type="radio" name="size" value="medium">&nbsp;Medium
+      <input type="radio" name="size" value="m" ng-model="answers.size">&nbsp;Medium
       <br>
-      <input type="radio" name="size" value="large">&nbsp;Large
+      <input type="radio" name="size" value="l" ng-model="answers.size">&nbsp;Large
       <br>
-      <input type="radio" name="size" value="extra-large">&nbsp;Extra Large
+      <input type="radio" name="size" value="xl" ng-model="answers.size">&nbsp;Extra Large
       <br>
-      <input type="radio" name="size" value="any-size">&nbsp;Any Size
+      <input type="radio" name="size" value="any" ng-model="answers.size">&nbsp;Any Size
       <br>
       <br>
-      <input type="submit" value="Get Started!" class="btn btn-primary">
+      <input type="submit" value="Get Started!" class="btn btn-primary" ng-click="sizeq()">
+    </p></form>
+  </div>
+  <!-- exercise -->
+  <div class="col-sm-4 well" ng-show="exercise" align="center">
+    <form>
+      <h4>How much time can you dedicate to exercising your dog?</h4>
+      <hr>
+      <p align="left">
+      <input type="radio" name="exercise" value="2" ng-model="answers.exercise">&nbsp;0-15 minutes per day
+      <br>
+      <input type="radio" name="exercise" value="3" ng-model="answers.exercise">&nbsp;16-30 minutes per day
+      <br>
+      <input type="radio" name="exercise" value="4" ng-model="answers.exercise">&nbsp;31-45 minutes per day
+      <br>
+      <input type="radio" name="exercise" value="5" ng-model="answers.exercise">&nbsp;46-60 minutes per day
+      <br>
+      <input type="radio" name="exercise" value="6" ng-model="answers.exercise">&nbsp;More than 60 minutes per day
+      <br>
+      <input type="radio" name="exercise" value="any" ng-model="answers.exercise">&nbsp;Any amount of exercise
+      <br>
+      <br>
+      <input type="submit" value="Next" class="btn btn-primary" ng-click="exerciseq()">
+    </p></form>
+  </div>
+  <!-- training -->
+  <div class="col-sm-4 well" ng-show="training" align="center">
+    <form>
+      <h4>How trainable should your dog be?</h4>
+      <hr>
+      <p align="left">
+      <input type="radio" name="training" value="2" ng-model="answers.training">&nbsp;Hard to train (for experienced dog owners)
+      <br>
+      <input type="radio" name="training" value="3" ng-model="answers.training">&nbsp;Somewhat hard to train
+      <br>
+      <input type="radio" name="training" value="4" ng-model="answers.training">&nbsp;Intermediate to train
+      <br>
+      <input type="radio" name="training" value="5" ng-model="answers.training">&nbsp;Easy to train the basics
+      <br>
+      <input type="radio" name="training" value="6" ng-model="answers.training">&nbsp;Easy to train the basics and lots of tricks
+      <br>
+      <input type="radio" name="training" value="any" ng-model="answers.training">&nbsp;Any amount of training
+      <br>
+      <br>
+      <input type="submit" value="Next" class="btn btn-primary" ng-click="trainingq()">
+    </p></form>
+  </div>
+  <!-- grooming -->
+  <div class="col-sm-4 well" ng-show="grooming" align="center">
+    <form>
+      <h4>How much grooming should your dog need?</h4>
+      <hr>
+      <p align="left">
+      <input type="radio" name="grooming" value="2" ng-model="answers.grooming">&nbsp;None
+      <br>
+      <input type="radio" name="grooming" value="3" ng-model="answers.grooming">&nbsp;Brushing once a week
+      <br>
+      <input type="radio" name="grooming" value="4" ng-model="answers.grooming">&nbsp;Brushing two times per week
+      <br>
+      <input type="radio" name="grooming" value="5" ng-model="answers.grooming">&nbsp;Brushing/combing every other day
+      <br>
+      <input type="radio" name="grooming" value="6" ng-model="answers.grooming">&nbsp;Every other day plus regular trims
+      <br>
+      <input type="radio" name="grooming" value="any" ng-model="answers.grooming">&nbsp;Any amount of grooming
+      <br>
+      <br>
+      <input type="submit" value="Next" class="btn btn-primary" ng-click="groomingq()">
+    </p></form>
+  </div>
+  <!-- petfriendly -->
+  <div class="col-sm-4 well" ng-show="petfriendly" align="center">
+    <form>
+      <h4>How pet-friendly should your dog be?</h4>
+      <hr>
+      <p align="left">
+      <input type="radio" name="petfriendly" value="2" ng-model="answers.petfriendly">&nbsp;Best in a single pet household
+      <br>
+      <input type="radio" name="petfriendly" value="3" ng-model="answers.petfriendly">&nbsp;Tolerant of some pets
+      <br>
+      <input type="radio" name="petfriendly" value="4" ng-model="answers.petfriendly">&nbsp;Okay if socialized as a puppy
+      <br>
+      <input type="radio" name="petfriendly" value="5" ng-model="answers.petfriendly">&nbsp;Friendly with most pets
+      <br>
+      <input type="radio" name="petfriendly" value="6" ng-model="answers.petfriendly">&nbsp;Super friendly with all kinds of pets
+      <br>
+      <input type="radio" name="petfriendly" value="any" ng-model="answers.petfriendly">&nbsp;Any of the above
+      <br>
+      <br>
+      <input type="submit" value="Next" class="btn btn-primary" ng-click="petfriendlyq()">
+    </p></form>
+  </div>
+  <!-- protective -->
+  <div class="col-sm-4 well" ng-show="protective" align="center">
+    <form>
+      <h4>How protective should your dog be?</h4>
+      <hr>
+      <p align="left">
+      <input type="radio" name="protective" value="2" ng-model="answers.protective">&nbsp;No protection drive
+      <br>
+      <input type="radio" name="protective" value="3" ng-model="answers.protective">&nbsp;Might protect you, but don't count on it
+      <br>
+      <input type="radio" name="protective" value="4" ng-model="answers.protective">&nbsp;Somewhat protective
+      <br>
+      <input type="radio" name="protective" value="5" ng-model="answers.protective">&nbsp;Protective of owner and family
+      <br>
+      <input type="radio" name="protective" value="6" ng-model="answers.protective">&nbsp;Highly protective of owner and protective of family members
+      <br>
+      <input type="radio" name="protective" value="any" ng-model="answers.protective">&nbsp;Not important to me
+      <br>
+      <br>
+      <input type="submit" value="Next" class="btn btn-primary" ng-click="protectiveq()">
+    </p></form>
+  </div>
+  <!-- affection -->
+  <div class="col-sm-4 well" ng-show="affection" align="center">
+    <form>
+      <h4>How affectionate should your dog be?</h4>
+      <hr>
+      <p align="left">
+      <input type="radio" name="affection" value="2" ng-model="answers.affection">&nbsp;Not very affectionate
+      <br>
+      <input type="radio" name="affection" value="3" ng-model="answers.affection">&nbsp;Aloof, but likes to be around you
+      <br>
+      <input type="radio" name="affection" value="4" ng-model="answers.affection">&nbsp;Somewhat affectionate
+      <br>
+      <input type="radio" name="affection" value="5" ng-model="answers.affection">&nbsp;Likes affection on a regular basis
+      <br>
+      <input type="radio" name="affection" value="6" ng-model="answers.affection">&nbsp;Very affectionate - likes to be your shadow
+      <br>
+      <input type="radio" name="affection" value="any" ng-model="answers.affection">&nbsp;Not important to me
+      <br>
+      <br>
+      <input type="submit" value="Submit" class="btn btn-primary" ng-click="affectionq()">
     </p></form>
   </div>
   <div class="col-sm-4 blue" align="center">
     <h3>Adopt your dog from a shelter near you!</h3>
   </div>
 </div>
+
+<!-- IMAGES -->
 <div class="row">
-  <div align="center">
+  <div align="center" ng-show="size">
     <img src="/images/dogs1.jpg" class="img-responsive">
+  </div>
+  <div align="center" ng-show="exercise">
+    <img src="/images/dogexercise2.jpg" class="img-responsive">
+  </div>
+  <div align="right" ng-show="training"  id="train">
+    <img src="/images/dogtrain2.jpg" class="img-responsive">
+  </div>
+  <div align="left" ng-show="grooming">
+    <img src="/images/doggrooming2.jpg" class="img-responsive">
+  </div>
+  <div align="center" ng-show="petfriendly" id="cat">
+    <img src="/images/dogcat.jpg" class="img-responsive">
+  </div>
+  <div align="center" ng-show="protective" >
+    <img src="/images/dogprotection.jpg" class="img-responsive">
+  </div>
+  <div align="center" ng-show="affection" >
+    <img src="/images/dogaffection.jpg" class="img-responsive">
   </div>
 </div>
