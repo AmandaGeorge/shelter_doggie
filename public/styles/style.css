@@ -54,11 +54,19 @@ p {
 	box-shadow: 10px 10px 5px #888888;
 }
 
-#tagline {
+.tagline {
 	text-shadow: 2px 2px #888888;
 }
 
 .blue {
 	color: #0087c5;
 	padding: 40px;
+}
+
+#train {
+	padding-right: 75px;
+}
+
+#cat {
+	padding-top: 40px;
 }

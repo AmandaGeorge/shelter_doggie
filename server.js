@@ -23,6 +23,30 @@ app.get('/api/breeds', function (req, res) {
 		res.json(breeds);
 	});
 });
+// 
+// send back all breeds that match user input
+app.get('/api/breeds/:size/:exercise/:training/:grooming/:catfriendly/:protective/:affection', function (req, res) {
+	var targetSize = req.params.size;
+	var targetExercise = req.params.exercise;
+	var targetTraining = req.params.training;
+	var targetGrooming = req.params.grooming;
+	var targetCatfriendly = req.params.catfriendly;
+	var targetProtective = req.params.protective;
+	var targetAffection = req.params.affection;
+
+	Breed.find({$and: [
+		{size: targetSize}, 
+		{exercise: targetExercise},
+		{easytraining: targetTraining}, 
+		{grooming: targetGrooming},
+		{catfriendly: targetCatfriendly},
+		{protection: targetProtective},
+		{affection: targetAffection}
+		]}, function (err, matches) {
+		console.log(matches);
+		res.json(matches);
+	});
+});
 
 //set location for static files
 app.use(express.static(__dirname + '/public'));

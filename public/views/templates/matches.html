@@ -1,0 +1,19 @@
+<div class="row">
+  <div class="col-sm-8 col-sm-offset-2" align="center">
+    <h1 class="tagline" ng-show="matches.length > 0">These breeds match your search!</h1>
+    <br>
+  </div>
+</div>
+<div class="row" ng-show="matches.length > 0">
+	<div class="col-sm-3" ng-repeat="match in matches">
+		<div class="thumbnail well">
+			<img ng-src="{{match.pictureurl}}">
+			<br>
+			<div align="center">
+				<h4>{{match.breed}}</h4>
+			</div>
+		</div>
+</div>
+<div class="row" ng-show="matches.length == 0">
+	<h2>There are no breeds that match your criteria.  Please consider changing some of your answers and try again.</h2>
+</div>

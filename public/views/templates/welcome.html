@@ -1,6 +1,6 @@
 <div class="row">
   <div class="col-sm-6 col-sm-offset-3" align="center">
-    <h1 id="tagline">Who's Your Doggie?</h1>
+    <h1 class="tagline">Who's Your Doggie?</h1>
     <br>
   </div>
 </div>
@@ -95,26 +95,26 @@
       <input type="submit" value="Next" class="btn btn-primary" ng-click="groomingq()">
     </p></form>
   </div>
-  <!-- petfriendly -->
-  <div class="col-sm-4 well" ng-show="petfriendly" align="center">
+  <!-- catfriendly -->
+  <div class="col-sm-4 well" ng-show="catfriendly" align="center">
     <form>
       <h4>How pet-friendly should your dog be?</h4>
       <hr>
       <p align="left">
-      <input type="radio" name="petfriendly" value="2" ng-model="answers.petfriendly">&nbsp;Best in a single pet household
+      <input type="radio" name="catfriendly" value="2" ng-model="answers.catfriendly">&nbsp;Best in a single pet household
       <br>
-      <input type="radio" name="petfriendly" value="3" ng-model="answers.petfriendly">&nbsp;Tolerant of some pets
+      <input type="radio" name="catfriendly" value="3" ng-model="answers.catfriendly">&nbsp;Tolerant of some pets
       <br>
-      <input type="radio" name="petfriendly" value="4" ng-model="answers.petfriendly">&nbsp;Okay if socialized as a puppy
+      <input type="radio" name="catfriendly" value="4" ng-model="answers.catfriendly">&nbsp;Okay if socialized as a puppy
       <br>
-      <input type="radio" name="petfriendly" value="5" ng-model="answers.petfriendly">&nbsp;Friendly with most pets
+      <input type="radio" name="catfriendly" value="5" ng-model="answers.catfriendly">&nbsp;Friendly with most pets
       <br>
-      <input type="radio" name="petfriendly" value="6" ng-model="answers.petfriendly">&nbsp;Super friendly with all kinds of pets
+      <input type="radio" name="catfriendly" value="6" ng-model="answers.catfriendly">&nbsp;Super friendly with all kinds of pets
       <br>
-      <input type="radio" name="petfriendly" value="any" ng-model="answers.petfriendly">&nbsp;Any of the above
+      <input type="radio" name="catfriendly" value="any" ng-model="answers.catfriendly">&nbsp;Any of the above
       <br>
       <br>
-      <input type="submit" value="Next" class="btn btn-primary" ng-click="petfriendlyq()">
+      <input type="submit" value="Next" class="btn btn-primary" ng-click="catfriendlyq()">
     </p></form>
   </div>
   <!-- protective -->
@@ -180,7 +180,7 @@
   <div align="left" ng-show="grooming">
     <img src="/images/doggrooming2.jpg" class="img-responsive">
   </div>
-  <div align="center" ng-show="petfriendly" id="cat">
+  <div align="center" ng-show="catfriendly" id="cat">
     <img src="/images/dogcat.jpg" class="img-responsive">
   </div>
   <div align="center" ng-show="protective" >
