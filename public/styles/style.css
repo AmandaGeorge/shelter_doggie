@@ -29,6 +29,7 @@
 .navbar-default .navbar-brand,
 h1,
 h4,
+h5,
 p {
 	color: #062a5d;
 }
@@ -69,4 +70,32 @@ p {
 
 #cat {
 	padding-top: 40px;
+}
+
+.thumbnail {
+	height: 310px;
+}
+
+.btn-primary {
+	background-color: #0087c5;
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+	background-color: #062a5d;
+}
+
+.btn-info {
+	background-color: #062a5d;
+	border-color: #062a5d;
+}
+
+.btn-info:hover,
+.btn-info:focus {
+	background-color: #0087c5;
+	border-color: #0087c5;
+}
+
+.breedpic {
+	padding-top: 20px;
 }

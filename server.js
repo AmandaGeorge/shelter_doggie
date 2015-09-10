@@ -23,7 +23,7 @@ app.get('/api/breeds', function (req, res) {
 		res.json(breeds);
 	});
 });
-// 
+
 // send back all breeds that match user input
 app.get('/api/breeds/:size/:exercise/:training/:grooming/:catfriendly/:protective/:affection', function (req, res) {
 	var targetSize = req.params.size;
@@ -45,6 +45,15 @@ app.get('/api/breeds/:size/:exercise/:training/:grooming/:catfriendly/:protectiv
 		]}, function (err, matches) {
 		console.log(matches);
 		res.json(matches);
+	});
+});
+
+// send back a single breed
+app.get('/api/breeds/:id', function (req, res) {
+	var targetId = req.params.id;
+
+	Breed.findOne({_id: targetId}, function (err, foundBreed) {
+		res.json(foundBreed);
 	});
 });
 
