@@ -23,7 +23,6 @@ app.config(['$routeProvider', function ($routeProvider) {
 }]);
 
 app.controller('MainCtrl', ['$scope', '$rootScope', '$location', function ($scope, $rootScope, $location) {
-
 	$rootScope.answers = {};
 	
 	// show and hide questions
@@ -100,19 +99,32 @@ app.controller('MatchCtrl', ['$scope', '$rootScope', '$http', '$location', funct
 }]);
 
 app.controller('BreedCtrl', ['$scope', '$rootScope', '$http', function ($scope, $rootScope, $http) {
+	$scope.breed = {};
 	// show info for a particular breed
 	$http.get('/api/breeds/'+ $rootScope.breedId)
 		.success(function (breed) {
 			console.log(breed);
 			$scope.breed = breed;
+
+			$scope.searchBreed();
 		})
 		.error(function (res) {
 			console.log("There was an error: " + res);
 		});
 
-	// $scope.searchBreed = function () {
-	// 	// var breed = $rootScope.breed
-	// }
+	
+
+	$scope.searchBreed = function () {
+		$scope.adoptables = [];
+		var breed = $scope.breed.breed.replace(/\s\(Standard\)/, '');
+		var url = 'http://api.petfinder.com/pet.find?animal=dog&breed='+ breed +'&location=94063&output=full&format=json&key=34919ce90a885d46886b391c924ffcb3&callback=JSON_CALLBACK'
+		$http.jsonp(url)
+			.then(function (response) {
+				$scope.adoptables = response.data.petfinder.pets.pet;
+				console.log(response.data.petfinder.pets.pet);
+
+			});
+	};
 }]);
 
 app.service('Breed', ['$resource', function ($resource) {

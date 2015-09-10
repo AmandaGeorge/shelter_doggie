@@ -18,7 +18,7 @@ Express
 Bower
 
 ## Heroku
-www.shelterdoggie.com
+https://shelterdoggie.herokuapp.com
 
 ## Install Locally
 - Clone the repository by typing the following in Terminal:
@@ -27,6 +27,9 @@ www.shelterdoggie.com
 - Install the node modules by typing the following in Terminal from the root folder of the app:
 
 	`npm install`
+- Import the breedData2.csv file into MongoDB in Terminal:
+
+	`mongoimport --db shelterdoggie --collection breeds --type csv --headerline --file ~/dev/shelter_doggie/breedData2.csv`
 
 ## Author
 Amanda George
