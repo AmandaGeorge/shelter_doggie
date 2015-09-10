@@ -5,14 +5,13 @@
   </div>
 </div>
 <div class="row" ng-show="matches.length > 0">
-	<div class="col-sm-3" ng-repeat="match in matches">
-		<div class="thumbnail well">
+	<div class="col-md-3 col-sm-4 col-xs-6" ng-repeat="match in matches">
+		<div class="thumbnail well" align="center">
 			<img ng-src="{{match.pictureurl}}">
-			<br>
-			<div align="center">
-				<h4>{{match.breed}}</h4>
-			</div>
+			<h4>{{match.breed}}</h4>
+			<input type="submit" value="Breed Info & Adoptable Dogs" class="btn btn-info" ng-click="breedInfo(match)">
 		</div>
+	</div>
 </div>
 <div class="row" ng-show="matches.length == 0">
 	<h2>There are no breeds that match your criteria.  Please consider changing some of your answers and try again.</h2>

@@ -15,15 +15,15 @@
       <h4>What size dog do you want?</h4>
       <hr>
       <p align="left">
-      <input type="radio" name="size" value="s" ng-model="answers.size">&nbsp;Small
+      <input type="radio" name="size" value="s" ng-model="answers.size">&nbsp;Small (under 25 pounds)
       <br>
-      <input type="radio" name="size" value="m" ng-model="answers.size">&nbsp;Medium
+      <input type="radio" name="size" value="m" ng-model="answers.size">&nbsp;Medium (25 to 49 pounds)
       <br>
-      <input type="radio" name="size" value="l" ng-model="answers.size">&nbsp;Large
+      <input type="radio" name="size" value="l" ng-model="answers.size">&nbsp;Large (50 to 100 pounds)
       <br>
-      <input type="radio" name="size" value="xl" ng-model="answers.size">&nbsp;Extra Large
+      <input type="radio" name="size" value="xl" ng-model="answers.size">&nbsp;Extra Large (over 100 pounds)
       <br>
-      <input type="radio" name="size" value="any" ng-model="answers.size">&nbsp;Any Size
+      <!-- <input type="radio" name="size" value="any" ng-model="answers.size">&nbsp;Any Size -->
       <br>
       <br>
       <input type="submit" value="Get Started!" class="btn btn-primary" ng-click="sizeq()">
@@ -32,7 +32,7 @@
   <!-- exercise -->
   <div class="col-sm-4 well" ng-show="exercise" align="center">
     <form>
-      <h4>How much time can you dedicate to exercising your dog?</h4>
+      <h4>How much time can you dedicate to exercising and playing with your dog?</h4>
       <hr>
       <p align="left">
       <input type="radio" name="exercise" value="2" ng-model="answers.exercise">&nbsp;0-15 minutes per day
@@ -45,7 +45,7 @@
       <br>
       <input type="radio" name="exercise" value="6" ng-model="answers.exercise">&nbsp;More than 60 minutes per day
       <br>
-      <input type="radio" name="exercise" value="any" ng-model="answers.exercise">&nbsp;Any amount of exercise
+      <!-- <input type="radio" name="exercise" value="any" ng-model="answers.exercise">&nbsp;Any amount of exercise -->
       <br>
       <br>
       <input type="submit" value="Next" class="btn btn-primary" ng-click="exerciseq()">
@@ -57,7 +57,7 @@
       <h4>How trainable should your dog be?</h4>
       <hr>
       <p align="left">
-      <input type="radio" name="training" value="2" ng-model="answers.training">&nbsp;Hard to train (for experienced dog owners)
+      <input type="radio" name="training" value="2" ng-model="answers.training">&nbsp;Hard to train
       <br>
       <input type="radio" name="training" value="3" ng-model="answers.training">&nbsp;Somewhat hard to train
       <br>
@@ -67,7 +67,7 @@
       <br>
       <input type="radio" name="training" value="6" ng-model="answers.training">&nbsp;Easy to train the basics and lots of tricks
       <br>
-      <input type="radio" name="training" value="any" ng-model="answers.training">&nbsp;Any amount of training
+      <!-- <input type="radio" name="training" value="any" ng-model="answers.training">&nbsp;Any amount of training -->
       <br>
       <br>
       <input type="submit" value="Next" class="btn btn-primary" ng-click="trainingq()">
@@ -81,15 +81,15 @@
       <p align="left">
       <input type="radio" name="grooming" value="2" ng-model="answers.grooming">&nbsp;None
       <br>
-      <input type="radio" name="grooming" value="3" ng-model="answers.grooming">&nbsp;Brushing once a week
+      <input type="radio" name="grooming" value="3" ng-model="answers.grooming">&nbsp;Once a week
       <br>
-      <input type="radio" name="grooming" value="4" ng-model="answers.grooming">&nbsp;Brushing two times per week
+      <input type="radio" name="grooming" value="4" ng-model="answers.grooming">&nbsp;Two times per week
       <br>
-      <input type="radio" name="grooming" value="5" ng-model="answers.grooming">&nbsp;Brushing/combing every other day
+      <input type="radio" name="grooming" value="5" ng-model="answers.grooming">&nbsp;Every other day
       <br>
       <input type="radio" name="grooming" value="6" ng-model="answers.grooming">&nbsp;Every other day plus regular trims
       <br>
-      <input type="radio" name="grooming" value="any" ng-model="answers.grooming">&nbsp;Any amount of grooming
+      <!-- <input type="radio" name="grooming" value="any" ng-model="answers.grooming">&nbsp;Any amount of grooming -->
       <br>
       <br>
       <input type="submit" value="Next" class="btn btn-primary" ng-click="groomingq()">
@@ -105,13 +105,13 @@
       <br>
       <input type="radio" name="catfriendly" value="3" ng-model="answers.catfriendly">&nbsp;Tolerant of some pets
       <br>
-      <input type="radio" name="catfriendly" value="4" ng-model="answers.catfriendly">&nbsp;Okay if socialized as a puppy
+      <input type="radio" name="catfriendly" value="4" ng-model="answers.catfriendly">&nbsp;Friendly when socialized as a puppy
       <br>
-      <input type="radio" name="catfriendly" value="5" ng-model="answers.catfriendly">&nbsp;Friendly with most pets
+      <input type="radio" name="catfriendly" value="5" ng-model="answers.catfriendly">&nbsp;Naturally friendly with most pets
       <br>
       <input type="radio" name="catfriendly" value="6" ng-model="answers.catfriendly">&nbsp;Super friendly with all kinds of pets
       <br>
-      <input type="radio" name="catfriendly" value="any" ng-model="answers.catfriendly">&nbsp;Any of the above
+      <!-- <input type="radio" name="catfriendly" value="any" ng-model="answers.catfriendly">&nbsp;Any of the above -->
       <br>
       <br>
       <input type="submit" value="Next" class="btn btn-primary" ng-click="catfriendlyq()">
@@ -133,7 +133,7 @@
       <br>
       <input type="radio" name="protective" value="6" ng-model="answers.protective">&nbsp;Highly protective of owner and protective of family members
       <br>
-      <input type="radio" name="protective" value="any" ng-model="answers.protective">&nbsp;Not important to me
+      <!-- <input type="radio" name="protective" value="any" ng-model="answers.protective">&nbsp;Not important to me -->
       <br>
       <br>
       <input type="submit" value="Next" class="btn btn-primary" ng-click="protectiveq()">
@@ -145,17 +145,17 @@
       <h4>How affectionate should your dog be?</h4>
       <hr>
       <p align="left">
-      <input type="radio" name="affection" value="2" ng-model="answers.affection">&nbsp;Not very affectionate
+      <input type="radio" name="affection" value="2" ng-model="answers.affection">&nbsp;Independent, doesn't need much affection
       <br>
-      <input type="radio" name="affection" value="3" ng-model="answers.affection">&nbsp;Aloof, but likes to be around you
+      <input type="radio" name="affection" value="3" ng-model="answers.affection">&nbsp;Likes to be around you, but doesn't seek out affection
       <br>
-      <input type="radio" name="affection" value="4" ng-model="answers.affection">&nbsp;Somewhat affectionate
+      <input type="radio" name="affection" value="4" ng-model="answers.affection">&nbsp;Likes affection, but doesn't seek it out
       <br>
-      <input type="radio" name="affection" value="5" ng-model="answers.affection">&nbsp;Likes affection on a regular basis
+      <input type="radio" name="affection" value="5" ng-model="answers.affection">&nbsp;Likes affection, seeks it out regularly
       <br>
-      <input type="radio" name="affection" value="6" ng-model="answers.affection">&nbsp;Very affectionate - likes to be your shadow
+      <input type="radio" name="affection" value="6" ng-model="answers.affection">&nbsp;Very affectionate - wants to be your shadow
       <br>
-      <input type="radio" name="affection" value="any" ng-model="answers.affection">&nbsp;Not important to me
+      <!-- <input type="radio" name="affection" value="any" ng-model="answers.affection">&nbsp;Not important to me -->
       <br>
       <br>
       <input type="submit" value="Submit" class="btn btn-primary" ng-click="affectionq()">
