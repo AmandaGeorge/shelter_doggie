@@ -112,8 +112,6 @@ app.controller('BreedCtrl', ['$scope', '$rootScope', '$http', function ($scope, 
 			console.log("There was an error: " + res);
 		});
 
-	
-
 	$scope.searchBreed = function () {
 		$scope.adoptables = [];
 		var breed = $scope.breed.breed.replace(/\s\(Standard\)/, '');
@@ -122,7 +120,6 @@ app.controller('BreedCtrl', ['$scope', '$rootScope', '$http', function ($scope, 
 			.then(function (response) {
 				$scope.adoptables = response.data.petfinder.pets.pet;
 				console.log(response.data.petfinder.pets.pet);
-
 			});
 	};
 }]);
