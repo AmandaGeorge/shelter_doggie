@@ -26,8 +26,7 @@ app.get('/api/breeds', function (req, res) {
 
 // send back all breeds that match user input
 app.get('/api/breeds/:size/:exercise/:training/:grooming/:catfriendly/:protective/:affection', function (req, res) {
-	// use $regex to add wildcards for unanswered questions
-	var targetSize = req.params.size || { $regex: /pattern/, $options: 's'};
+	// var targetSize = req.params.size || { $regex: /pattern/, $options: 's'};
 	var targetSize = req.params.size;
 	var targetExercise = req.params.exercise;
 	var targetTraining = req.params.training;

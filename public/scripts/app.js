@@ -114,7 +114,8 @@ app.controller('BreedCtrl', ['$scope', '$rootScope', '$http', function ($scope, 
 
 	$scope.searchBreed = function () {
 		$scope.adoptables = [];
-		var breed = $scope.breed.breed.replace(/\s\(Standard\)/, '');
+		var breed = $scope.breed.breed.replace(/\s\(Standard\)|\s\(Miniature\)|\s\(Toy\)|\s\(or Gazelle Hound\)/, '');
+		console.log(breed);
 		var url = 'http://api.petfinder.com/pet.find?animal=dog&breed='+ breed +'&location=94063&output=full&format=json&key=34919ce90a885d46886b391c924ffcb3&callback=JSON_CALLBACK'
 		$http.jsonp(url)
 			.then(function (response) {
