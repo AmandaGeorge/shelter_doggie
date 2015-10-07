@@ -18,22 +18,21 @@ mongoose.connect(
 );
 
 // send back all breeds
-app.get('/api/breeds', function (req, res) {
-	Breed.find({}, function (err, breeds) {
-		res.json(breeds);
-	});
-});
+// app.get('/api/breeds', function (req, res) {
+// 	Breed.find({}, function (err, breeds) {
+// 		res.json(breeds);
+// 	});
+// });
 
 // send back all breeds that match user input
-app.get('/api/breeds/:size/:exercise/:training/:grooming/:catfriendly/:protective/:affection', function (req, res) {
-	// var targetSize = req.params.size || { $regex: /pattern/, $options: 's'};
-	var targetSize = req.params.size;
-	var targetExercise = req.params.exercise;
-	var targetTraining = req.params.training;
-	var targetGrooming = req.params.grooming;
-	var targetCatfriendly = req.params.catfriendly;
-	var targetProtective = req.params.protective;
-	var targetAffection = req.params.affection;
+app.get('/api/breeds', function (req, res) {
+	var targetSize = req.query.size;
+	var targetExercise = req.query.exercise;
+	var targetTraining = req.query.training;
+	var targetGrooming = req.query.grooming;
+	var targetCatfriendly = req.query.catfriendly;
+	var targetProtective = req.query.protective;
+	var targetAffection = req.query.affection;
 
 	Breed.find({$and: [
 		{size: targetSize}, 
@@ -44,7 +43,7 @@ app.get('/api/breeds/:size/:exercise/:training/:grooming/:catfriendly/:protectiv
 		{protection: targetProtective},
 		{affection: targetAffection}
 		]}, function (err, matches) {
-		console.log(matches);
+		console.log('these are the matches: ' + matches);
 		res.json(matches);
 	});
 });
