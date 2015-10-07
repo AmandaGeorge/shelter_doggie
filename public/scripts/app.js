@@ -69,17 +69,19 @@ app.controller('MainCtrl', ['$scope', '$rootScope', '$location', function ($scop
 
 app.controller('MatchCtrl', ['$scope', '$rootScope', '$http', '$location', function ($scope, $rootScope, $http, $location) {
 
-	// parameters from user answers
-	var size = $rootScope.answers.size;
-	var exercise = $rootScope.answers.exercise;
-	var training = $rootScope.answers.training;
-	var grooming = $rootScope.answers.grooming;
-	var catfriendly = $rootScope.answers.catfriendly;
-	var protective = $rootScope.answers.protective;
-	var affection = $rootScope.answers.affection;
-
-	// query the db using user parameters
-	$http.get('/api/breeds/'+size+'/'+exercise+'/'+training+'/'+grooming+'/'+catfriendly+'/'+protective+'/'+affection)
+	// query the db using user answers
+	$http
+		.get('/api/breeds/', {
+			params: {
+				'size': $rootScope.answers.size,
+				'exercise': $rootScope.answers.exercise,
+				'training': $rootScope.answers.training,
+				'grooming': $rootScope.answers.grooming,
+				'catfriendly': $rootScope.answers.catfriendly,
+				'protective': $rootScope.answers.protective,
+				'affection': $rootScope.answers.affection
+			}
+		})
 		.success(function (matches) {
 			console.log(matches);
 			$rootScope.matches = matches;
