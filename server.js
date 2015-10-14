@@ -26,19 +26,68 @@ mongoose.connect(
 
 // send back all breeds that match user input
 app.get('/api/breeds', function (req, res) {
-	var targetSize = req.query.size;
-	var targetExercise = req.query.exercise;
-	var targetTraining = req.query.training;
-	var targetGrooming = req.query.grooming;
-	var targetCatfriendly = req.query.catfriendly;
-	var targetProtective = req.query.protective;
-	var targetAffection = req.query.affection;
+	
+	// function to format the array of desired characteristics
+	function formatArr (targetArr, formattedArr) {
+		for (var i = 0; i < targetArr.length; i++) {
+			formattedArr.push({size:targetArr[i]})
+		};
+		return formattedArr;
+	};
+	// SIZE
+	var targetSize = Object.keys(JSON.parse(req.query.size));
+	// format size array for mongodb query 
+	var formattedSize = [];
+	var formattedSize = formatArr(targetSize, formattedSize);
+	console.log(formattedSize);
+
+	// EXERCISE
+	var targetExercise = Object.keys(JSON.parse(req.query.exercise));
+	// format exercise array for mongodb query
+	var formattedExercise = [];
+	var formattedExercise = formatArr(targetExercise, formattedExercise);
+	console.log(formattedExercise);
+
+	// TRAINING
+	var targetTraining = Object.keys(JSON.parse(req.query.training));
+	// format training array for mongodb query
+	var formattedTraining = [];
+	var formattedTraining = formatArr(targetTraining, formattedTraining);
+	console.log(formattedTraining);
+
+	// GROOMING
+	var targetGrooming = Object.keys(JSON.parse(req.query.grooming));
+	// format grooming array for mongodb query
+	var formattedGrooming = [];
+	var formattedGrooming = formatArr(targetGrooming, formattedGrooming);
+	console.log(formattedGrooming);
+
+	// CATFRIENDLY
+	var targetCatfriendly = Object.keys(JSON.parse(req.query.catfriendly));
+	// format catfriendly array for mongodb query
+	var formattedCatfriendly = [];
+	var formattedCatfriendly = formatArr(targetCatfriendly, formattedCatfriendly);
+	console.log(formattedCatfriendly);
+
+	// PROTECTIVE
+	var targetProtective = Object.keys(JSON.parse(req.query.protective));
+	// format protective array for mongodb query
+	var formattedProtective = [];
+	var formattedProtective = formatArr(targetProtective, formattedProtective);
+	console.log(formattedProtective);
+
+	// AFFECTION
+	var targetAffection = Object.keys(JSON.parse(req.query.affection));
+	// format affection array for mongodb query
+	var formattedAffection = [];
+	var formattedAffection = formatArr(targetAffection, formattedAffection);
+	console.log(formattedAffection);
 
 	Breed.find({$and: [
-		{size: targetSize}, 
-		{exercise: targetExercise},
-		{easytraining: targetTraining}, 
-		{grooming: targetGrooming},
+		{$or: formattedSize}, 
+		{$or: formattedExercise},
+		{$or: formattedTraining}, 
+		{$or: formattedGrooming},
 		{catfriendly: targetCatfriendly},
 		{protection: targetProtective},
 		{affection: targetAffection}

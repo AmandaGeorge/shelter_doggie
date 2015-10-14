@@ -26,8 +26,8 @@ app.controller('MainCtrl', ['$scope', '$rootScope', '$location', function ($scop
 	$rootScope.answers = {};
 	
 	// show and hide questions
-	$scope.size = true;
-	$scope.exercise = false;
+	$scope.sizeDiv = true;
+	$scope.exerciseDiv = false;
 	$scope.training = false;
 	$scope.grooming = false;
 	$scope.catfriendly = false;
@@ -36,11 +36,11 @@ app.controller('MainCtrl', ['$scope', '$rootScope', '$location', function ($scop
 
 	// get started button
 	$scope.sizeq = function () {
-		$scope.size = false;
-		$scope.exercise = true;
+		$scope.sizeDiv = false;
+		$scope.exerciseDiv = true;
 	};
 	$scope.exerciseq = function () {
-		$scope.exercise = false;
+		$scope.exerciseDiv = false;
 		$scope.training = true;
 	};
 	$scope.trainingq = function () {

@@ -10,42 +10,39 @@
   </div>
 <!-- FORM QUESTIONS -->
   <!-- size -->
-  <div class="col-sm-4 well" ng-show="size" align="center">
+  <div class="col-sm-4 well" ng-show="sizeDiv" align="center">
     <form >
       <h4>What size dog do you want?</h4>
       <hr>
       <p align="left">
-      <input type="radio" name="size" value="s" ng-model="answers.size">&nbsp;Small (under 25 pounds)
+      <!-- {{answers.size}} -->
+      <input type="checkbox" ng-model="answers.size.s">&nbsp;Small (under 25 pounds)
       <br>
-      <input type="radio" name="size" value="m" ng-model="answers.size">&nbsp;Medium (25 to 49 pounds)
+      <input type="checkbox" ng-model="answers.size.m">&nbsp;Medium (25 to 49 pounds)
       <br>
-      <input type="radio" name="size" value="l" ng-model="answers.size">&nbsp;Large (50 to 100 pounds)
+      <input type="checkbox" ng-model="answers.size.l">&nbsp;Large (50 to 100 pounds)
       <br>
-      <input type="radio" name="size" value="xl" ng-model="answers.size">&nbsp;Extra Large (over 100 pounds)
-      <br>
-      <!-- <input type="radio" name="size" value="any" ng-model="answers.size">&nbsp;Any Size -->
+      <input type="checkbox" ng-model="answers.size.xl">&nbsp;Extra Large (over 100 pounds)
       <br>
       <br>
       <input type="submit" value="Get Started!" class="btn btn-primary" ng-click="sizeq()">
     </p></form>
   </div>
   <!-- exercise -->
-  <div class="col-sm-4 well" ng-show="exercise" align="center">
+  <div class="col-sm-4 well" ng-show="exerciseDiv" align="center">
     <form>
-      <h4>How much time can you dedicate to exercising and playing with your dog?</h4>
+      <h4>How much time can you dedicate to exercising and playing with your dog each day?</h4>
       <hr>
       <p align="left">
-      <input type="radio" name="exercise" value="2" ng-model="answers.exercise">&nbsp;0-15 minutes per day
+      <input type="checkbox" ng-model="answers.exercise.2">&nbsp;15 minutes or less
       <br>
-      <input type="radio" name="exercise" value="3" ng-model="answers.exercise">&nbsp;16-30 minutes per day
+      <input type="checkbox" ng-model="answers.exercise.3">&nbsp;16-30 minutes
       <br>
-      <input type="radio" name="exercise" value="4" ng-model="answers.exercise">&nbsp;31-45 minutes per day
+      <input type="checkbox" ng-model="answers.exercise.4">&nbsp;31-45 minutes
       <br>
-      <input type="radio" name="exercise" value="5" ng-model="answers.exercise">&nbsp;46-60 minutes per day
+      <input type="checkbox" ng-model="answers.exercise.5">&nbsp;46-60 minutes
       <br>
-      <input type="radio" name="exercise" value="6" ng-model="answers.exercise">&nbsp;More than 60 minutes per day
-      <br>
-      <!-- <input type="radio" name="exercise" value="any" ng-model="answers.exercise">&nbsp;Any amount of exercise -->
+      <input type="checkbox" ng-model="answers.exercise.6">&nbsp;More than 60 minutes
       <br>
       <br>
       <input type="submit" value="Next" class="btn btn-primary" ng-click="exerciseq()">
@@ -57,17 +54,15 @@
       <h4>How trainable should your dog be?</h4>
       <hr>
       <p align="left">
-      <input type="radio" name="training" value="2" ng-model="answers.training">&nbsp;Hard to train
+      <input type="checkbox" ng-model="answers.training.2">&nbsp;Trainable with extended practice and ongoing reminder sessions 
       <br>
-      <input type="radio" name="training" value="3" ng-model="answers.training">&nbsp;Somewhat hard to train
+      <input type="checkbox" ng-model="answers.training.3">&nbsp;Fair obedience, needs extended practice to be reliable
       <br>
-      <input type="radio" name="training" value="4" ng-model="answers.training">&nbsp;Intermediate to train
+      <input type="checkbox" ng-model="answers.training.4">&nbsp;Average obedience, needs extra practice or likely to forget commands
       <br>
-      <input type="radio" name="training" value="5" ng-model="answers.training">&nbsp;Easy to train the basics
+      <input type="checkbox" ng-model="answers.training.5">&nbsp;Obedient and easy to train with a little more practice time
       <br>
-      <input type="radio" name="training" value="6" ng-model="answers.training">&nbsp;Easy to train the basics and lots of tricks
-      <br>
-      <!-- <input type="radio" name="training" value="any" ng-model="answers.training">&nbsp;Any amount of training -->
+      <input type="checkbox" ng-model="answers.training.6">&nbsp;Eagerly obedient, attentive, and wants to learn more
       <br>
       <br>
       <input type="submit" value="Next" class="btn btn-primary" ng-click="trainingq()">
@@ -79,17 +74,15 @@
       <h4>How much grooming should your dog need?</h4>
       <hr>
       <p align="left">
-      <input type="radio" name="grooming" value="2" ng-model="answers.grooming">&nbsp;None
+      <input type="checkbox" ng-model="answers.grooming.2">&nbsp;None
       <br>
-      <input type="radio" name="grooming" value="3" ng-model="answers.grooming">&nbsp;Once a week
+      <input type="checkbox" ng-model="answers.grooming.3">&nbsp;Once a week
       <br>
-      <input type="radio" name="grooming" value="4" ng-model="answers.grooming">&nbsp;Two times per week
+      <input type="checkbox" ng-model="answers.grooming.4">&nbsp;Two times per week
       <br>
-      <input type="radio" name="grooming" value="5" ng-model="answers.grooming">&nbsp;Every other day
+      <input type="checkbox" ng-model="answers.grooming.5">&nbsp;Every other day
       <br>
-      <input type="radio" name="grooming" value="6" ng-model="answers.grooming">&nbsp;Every other day plus regular trims
-      <br>
-      <!-- <input type="radio" name="grooming" value="any" ng-model="answers.grooming">&nbsp;Any amount of grooming -->
+      <input type="checkbox" ng-model="answers.grooming.6">&nbsp;Every other day plus regular trims
       <br>
       <br>
       <input type="submit" value="Next" class="btn btn-primary" ng-click="groomingq()">
@@ -101,17 +94,15 @@
       <h4>How pet-friendly should your dog be?</h4>
       <hr>
       <p align="left">
-      <input type="radio" name="catfriendly" value="2" ng-model="answers.catfriendly">&nbsp;Best in a single pet household
+      <input type="checkbox" ng-model="answers.catfriendly.2">&nbsp;Best in a single pet household
       <br>
-      <input type="radio" name="catfriendly" value="3" ng-model="answers.catfriendly">&nbsp;Tolerant of some pets
+      <input type="checkbox" ng-model="answers.catfriendly.3">&nbsp;Okay with some pets
       <br>
-      <input type="radio" name="catfriendly" value="4" ng-model="answers.catfriendly">&nbsp;Friendly when socialized as a puppy
+      <input type="checkbox" ng-model="answers.catfriendly.4">&nbsp;Friendly when socialized as a puppy
       <br>
-      <input type="radio" name="catfriendly" value="5" ng-model="answers.catfriendly">&nbsp;Naturally friendly with most pets
+      <input type="checkbox" ng-model="answers.catfriendly.5">&nbsp;Naturally friendly with most pets
       <br>
-      <input type="radio" name="catfriendly" value="6" ng-model="answers.catfriendly">&nbsp;Super friendly with all kinds of pets
-      <br>
-      <!-- <input type="radio" name="catfriendly" value="any" ng-model="answers.catfriendly">&nbsp;Any of the above -->
+      <input type="checkbox" ng-model="answers.catfriendly.6">&nbsp;Super friendly with all kinds of pets
       <br>
       <br>
       <input type="submit" value="Next" class="btn btn-primary" ng-click="catfriendlyq()">
@@ -123,17 +114,15 @@
       <h4>How protective should your dog be?</h4>
       <hr>
       <p align="left">
-      <input type="radio" name="protective" value="2" ng-model="answers.protective">&nbsp;No protection drive
+      <input type="checkbox" ng-model="answers.protective.2">&nbsp;No protection drive
       <br>
-      <input type="radio" name="protective" value="3" ng-model="answers.protective">&nbsp;Might protect you, but don't count on it
+      <input type="checkbox" ng-model="answers.protective.3">&nbsp;Might protect you, but don't count on it
       <br>
-      <input type="radio" name="protective" value="4" ng-model="answers.protective">&nbsp;Somewhat protective
+      <input type="checkbox" ng-model="answers.protective.4">&nbsp;Somewhat protective
       <br>
-      <input type="radio" name="protective" value="5" ng-model="answers.protective">&nbsp;Protective of owner and family
+      <input type="checkbox" ng-model="answers.protective.5">&nbsp;Protective of owner and family
       <br>
-      <input type="radio" name="protective" value="6" ng-model="answers.protective">&nbsp;Highly protective of owner and protective of family members
-      <br>
-      <!-- <input type="radio" name="protective" value="any" ng-model="answers.protective">&nbsp;Not important to me -->
+      <input type="checkbox" ng-model="answers.protective.6">&nbsp;Highly protective of owner and protective of family members
       <br>
       <br>
       <input type="submit" value="Next" class="btn btn-primary" ng-click="protectiveq()">
@@ -155,8 +144,6 @@
       <br>
       <input type="radio" name="affection" value="6" ng-model="answers.affection">&nbsp;Very affectionate - wants to be your shadow
       <br>
-      <!-- <input type="radio" name="affection" value="any" ng-model="answers.affection">&nbsp;Not important to me -->
-      <br>
       <br>
       <input type="submit" value="Submit" class="btn btn-primary" ng-click="affectionq()">
     </p></form>
@@ -168,7 +155,7 @@
 
 <!-- IMAGES -->
 <div class="row">
-  <div align="center" ng-show="size">
+  <div align="center" ng-show="sizeDiv">
     <img src="/images/dogs1.jpg" class="img-responsive">
   </div>
   <div align="center" ng-show="exercise">
