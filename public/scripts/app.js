@@ -38,14 +38,17 @@ app.controller('MainCtrl', ['$scope', '$rootScope', '$location', function ($scop
 	$scope.sizeq = function () {
 		$scope.sizeDiv = false;
 		$scope.exerciseDiv = true;
+		console.log($rootScope.answers.size);
 	};
 	$scope.exerciseq = function () {
 		$scope.exerciseDiv = false;
 		$scope.training = true;
+		console.log($rootScope.answers.exercise);
 	};
 	$scope.trainingq = function () {
 		$scope.training = false;
 		$scope.grooming = true;
+		console.log($rootScope.answers);
 	};
 	$scope.groomingq = function () {
 		$scope.grooming = false;
