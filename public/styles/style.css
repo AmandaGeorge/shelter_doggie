@@ -100,3 +100,14 @@ p {
 .breedpic {
 	padding-top: 20px;
 }
+
+.error {
+	background-color: rgba(255, 0, 0, .2) !important;
+	border-radius: 15px;
+	box-shadow: none !important;
+}
+
+.error h3,
+.error p {
+	color: rgb(255, 0, 0);
+}

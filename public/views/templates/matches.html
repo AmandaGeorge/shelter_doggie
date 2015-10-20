@@ -14,5 +14,14 @@
 	</div>
 </div>
 <div class="row" ng-show="matches.length == 0">
-	<h2>There are no breeds that match your criteria.  Please consider changing some of your answers and try again.</h2>
+	<div class="col-sm-10">
+		<h2>There are no breeds that match your criteria.  Please consider changing some of your answers and try again.</h2>
+	</div>
+</div>
+<div class="row" ng-show="matches.length === undefined">
+	<div class="col-sm-4 col-sm-offset-4 well error">
+		<h3>Error</h3>
+		<hr>
+		<p>{{error}}</p>
+	</div>
 </div>

@@ -74,7 +74,7 @@ app.controller('MatchCtrl', ['$scope', '$rootScope', '$http', '$location', funct
 
 	// query the db using user answers
 	$http
-		.get('/api/breeds/', {
+		.get('/api/breeds/search', {
 			params: {
 				'size': $rootScope.answers.size,
 				'exercise': $rootScope.answers.exercise,
@@ -89,8 +89,9 @@ app.controller('MatchCtrl', ['$scope', '$rootScope', '$http', '$location', funct
 			console.log(matches);
 			$rootScope.matches = matches;
 		})
-		.error(function (res) {
-			console.log("There was an error: " + res);
+		.error(function (err) {
+			console.log("There was an error: " + err);
+			$scope.error = "500: Internal Server Error";
 		});
 
 	// click function for more info button
@@ -113,8 +114,9 @@ app.controller('BreedCtrl', ['$scope', '$rootScope', '$http', function ($scope, 
 
 			$scope.searchBreed();
 		})
-		.error(function (res) {
-			console.log("There was an error: " + res);
+		.error(function (err) {
+			console.log("There was an error: " + err);
+			$scope.error = "500: Internal Server Error";
 		});
 
 	$scope.searchBreed = function () {
