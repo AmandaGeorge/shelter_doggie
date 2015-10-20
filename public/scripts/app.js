@@ -36,37 +36,62 @@ app.controller('MainCtrl', ['$scope', '$rootScope', '$location', function ($scop
 
 	// get started button
 	$scope.sizeq = function () {
-		$scope.sizeDiv = false;
-		$scope.exerciseDiv = true;
-		console.log($rootScope.answers.size);
+		if ($rootScope.answers.size == undefined) {
+			alert("Please select all that apply.  You must select at least one option.")
+		} else {
+			$scope.sizeDiv = false;
+			$scope.exerciseDiv = true;
+		};
 	};
 	$scope.exerciseq = function () {
-		$scope.exerciseDiv = false;
-		$scope.training = true;
-		console.log($rootScope.answers.exercise);
+		if ($rootScope.answers.exercise == undefined) {
+			alert("Please select all that apply.  You must select at least one option.")
+		} else {
+			$scope.exerciseDiv = false;
+			$scope.training = true;
+		};
 	};
 	$scope.trainingq = function () {
-		$scope.training = false;
-		$scope.grooming = true;
-		console.log($rootScope.answers);
+		if ($rootScope.answers.training == undefined) {
+			alert("Please select all that apply.  You must select at least one option.")
+		} else {
+			$scope.training = false;
+			$scope.grooming = true;
+		};
 	};
 	$scope.groomingq = function () {
-		$scope.grooming = false;
-		$scope.catfriendly = true;
+		if ($rootScope.answers.grooming == undefined) {
+			alert("Please select all that apply.  You must select at least one option.")
+		} else {
+			$scope.grooming = false;
+			$scope.catfriendly = true;
+		};
 	};
 	$scope.catfriendlyq = function () {
-		$scope.catfriendly = false;
-		$scope.protective = true;
+		if ($rootScope.answers.catfriendly == undefined) {
+			alert("Please select all that apply.  You must select at least one option.")
+		} else {
+			$scope.catfriendly = false;
+			$scope.protective = true;
+		};
 	};
 	$scope.protectiveq = function () {
-		$scope.protective = false;
-		$scope.affection = true;
+		if ($rootScope.answers.protective == undefined) {
+			alert("Please select all that apply.  You must select at least one option.")
+		} else {
+			$scope.protective = false;
+			$scope.affection = true;
+		};
 	};
 	// submit button
 	$scope.affectionq = function () {
-		console.log($rootScope.answers);
-		// redirect to the match results page
-		$location.path('/matches');
+		if ($rootScope.answers.affection == undefined) {
+			alert("Please select all that apply.  You must select at least one option.")
+		} else {
+			console.log($rootScope.answers);
+			// redirect to the match results page
+			$location.path('/matches');
+		};
 	};
 }]);
 

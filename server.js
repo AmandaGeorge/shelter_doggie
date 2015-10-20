@@ -36,22 +36,7 @@ app.get('/api/breeds/search', function (req, res) {
 		};
 		return formattedArr;
 	};
-	// //function to get values from query objects
-	// function getKeysIfTrue (obj) {
-	// 	var keys = Object.keys(obj);
-	// 	console.log(keys);
-	// 	var trueArr = [];
-	// 	for (var i = 0; i < keys.length; i++) {
-	// 		if (obj[keys[i]] === true) {
-	// 			var key = obj[i];
-	// 			console.log("key: " + key);
-	// 			trueArr.push(key);
-	// 		};
-	// 	};
-	// 	console.log("trueArr: " + trueArr);
-	// 	return trueArr;
-	// };
-
+	
 	// SIZE
 	var targetSize = Object.keys(JSON.parse(req.query.size));
 	var sizeKey = "size";
