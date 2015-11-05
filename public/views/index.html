@@ -32,7 +32,7 @@
 </head>
 <body ng-controller="MainCtrl">
 
-  <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+  <nav class="navbar navbar-default navbar-fixed-top">
     <div class="container">
       <div class="navbar-header">
         <!-- <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#toggle">
@@ -41,7 +41,7 @@
           <span class="icon-bar nav-color"></span>
           <span class="icon-bar nav-color"></span>
         </button> -->
-        <a class="navbar-brand nav-color" href="#/"><span><img src="/images/dogiconsm.png" width="45"/></span><b>&nbsp;ShelterDoggie</b></a>
+        <a class="navbar-brand nav-color" href="#/"><span><img src="/images/dogiconsm.png" alt="logo" width="45"/></span><b>&nbsp;ShelterDoggie</b></a>
       </div>
       <!-- <div class="collapse navbar-collapse" id="toggle" >
         <ul class="nav navbar-nav navbar-right nav-color">
@@ -51,8 +51,6 @@
       </div> -->
     </div>
   </nav>
-  <div class="container-fluid body1">
-    <ng-view></ng-view><!-- end of body1 -->
-  </div>
+  <div ng-view class="container-fluid body1"></div>
 </body>
 </html>
